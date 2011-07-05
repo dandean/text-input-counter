@@ -1,0 +1,11 @@
+{
+  "author": "Dan Dean <@dandean> (http://dandean.com)",
+  "name": "text-input-counter",
+  "version": "0.0.1",
+  "repository": {
+    "url": "git://github.com/dandean/text-input-counter.git"
+  },
+  "directories": {
+    "lib": "."
+  }
+}

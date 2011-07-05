@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Input Counter</title>
+    <script src="../index.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      (function() {
+        var $ = function(selector) {
+          return document.querySelector(selector);
+        };
+        
+        document.addEventListener("DOMContentLoaded", function(e) {
+          new Counter($('textarea'), 2).addObserver((function() {
+            var span = $('textarea + span');
+            return function(length) {
+              span.textContent = length + " characters";
+            };
+          })());
+
+          new Counter($('input[type=text]'), 5).addObserver((function() {
+            var span = $('input[type=text] + span');
+            return function(length) {
+              span.textContent = length + " characters";
+            };
+          })());
+
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <p>
+      <textarea></textarea>
+      <span></span>
+    </p>
+    <p>
+      <input type="text">
+      <span></span>
+    </p>
+  </body>
+</html>
